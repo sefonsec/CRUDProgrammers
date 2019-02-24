@@ -1,0 +1,22 @@
+﻿@using CRUDProgrammers.Models
+
+<form asp-controller="Pessoa" asp-action="Index" method="post">
+    <dl class="row">
+        <dt class="form-group form-group-lg col-sm-10">
+            <span><strong>Nome</strong></span>
+            <input type="text" name="NomeCompleto" class="form-control" />
+        </dt>
+        <dt class="form-group form-group-lg col-sm-2 mt-4 d-none d-lg-block">
+            <button type="submit" value="Pesquisar" class="form-control btn btn-info" title="Pesquisar">
+                <span class="fa fa-search"></span>
+                <span> Pesquisar</span>
+            </button>
+        </dt>
+        <dt class="form-group form-group-lg col-sm-2 d-lg-none">
+            <button type="submit" value="Pesquisar" class="form-control btn btn-info" title="Pesquisar">
+                <span class="fa fa-search"></span>
+                <span> Pesquisar</span>
+            </button>
+        </dt>
+    </dl>
+</form>

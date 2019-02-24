@@ -1,0 +1,50 @@
+﻿@model CRUDProgrammers.Models.PessoaModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="bg-info panel-body text-center">
+    <h3>Excluir</h3>
+</div>
+
+<h3 class="mt-3 d-none d-lg-block"><strong>Deseja realmente excluir este cadastro?</strong></h3>
+<h6 class="mt-3 d-lg-none"><strong>Deseja realmente excluir este cadastro?</strong></h6>
+
+<hr />        
+<dl class="row">
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.NomeCompleto)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.NomeCompleto)
+    </dd>
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.Telefone)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.Telefone)
+    </dd>
+</dl>
+    
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="text-center">
+        <a asp-action="Index" class="btn btn-info" title="Voltar">
+            <span class="fa fa-arrow-left"></span>
+            <span> Voltar</span>
+        </a>
+
+        <button type="submit" value="Excluir" class="btn btn-info" title="Excluir">
+            <span class="fa fa-trash"></span>
+            <span> Excluir</span>
+        </button>
+    </div>
+</form>

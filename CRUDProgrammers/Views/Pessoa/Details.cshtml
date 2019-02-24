@@ -1,0 +1,43 @@
+﻿@model CRUDProgrammers.Models.PessoaModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="bg-info panel-body text-center">
+    <h3>Detalhes</h3>
+</div>
+
+<div class="mt-3">      
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeCompleto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeCompleto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+</div>
+<div class="text-center">
+    <a asp-action="Index" class="btn btn-info" title="Voltar">
+        <span class="fa fa-arrow-left"></span>
+        <span> Voltar</span>
+    </a>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info" title="Alterar">
+        <span class="fa fa-user-circle-o"></span>
+        <span> Alterar</span>
+    </a>
+</div>
